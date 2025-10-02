@@ -1,0 +1,87 @@
+{
+    "hero_title": "",
+    "hero_chapter": "",
+    "hero_carousel1": "uploads/Gemini_Generated_Image_wbia2iwbia2iwbia_2.png",
+    "hero_carousel2": "uploads/Gemini_Generated_Image_wbia2iwbia2iwbia_1.png",
+    "hero_carousel3": "uploads/Gemini_Generated_Image_wbia2iwbia2iwbia.png",
+    "video_url": "uploads/",
+    "about_paragraph1": "",
+    "partner": [
+        {
+            "icon": "💻"
+        },
+        {
+            "icon": "⚙️"
+        },
+        {
+            "icon": "🎨"
+        },
+        {
+            "icon": "🗄️"
+        },
+        {
+            "icon": "🧠"
+        },
+        {
+            "icon": "🗣️"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Game Acak Lirik Lagu",
+            "description": "Project game sederhana mengacak lirik lagu anak-anak, dibuat dengan Java.",
+            "image": "img/Screenshot (9).png",
+            "demo_url": "#",
+            "github_url": "#"
+        },
+        {
+            "title": "LuniXstore",
+            "description": "Website top-up platform game online berbasis Java.",
+            "image": "img/Screenshot (297).png",
+            "demo_url": "#",
+            "github_url": "#"
+        },
+        {
+            "title": "LuniXoto",
+            "description": "Website CRUD informasi spesifikasi otomotif roda dua sebagai majalah digital.",
+            "image": "img/Screenshot (1213).png",
+            "demo_url": "#",
+            "github_url": "#"
+        },
+        {
+            "title": "LuniXexhaust",
+            "description": "Website penjualan knalpot dengan dashboard admin dan database.",
+            "image": "img/Cuplikan layar 2025-07-16 192551.png",
+            "demo_url": "#",
+            "github_url": "#"
+        },
+        {
+            "title": "LuniXstrat",
+            "description": "Aplikasi mobile + admin untuk strategi dan partner agent Valorant.",
+            "image": "img/LuniXstrats.png",
+            "demo_url": "#",
+            "github_url": "#"
+        },
+        {
+            "title": "LuniXpass (Wireframe)",
+            "description": "Wireframe dan prototype app penyewaan game dengan mystery box.",
+            "image": "img/Cuplikan layar 2025-07-16 202606.png",
+            "demo_url": "#",
+            "github_url": "#"
+        }
+    ],
+    "hero": {
+        "title": "",
+        "description": "",
+        "image": "uploads/Backg.jpg",
+        "chapter": ""
+    },
+    "carousel": [
+        "uploads/bmw-m340i-xdrive-50-50-years-of-bmw-m-50-jahre-bmw-m-50-7680x5625-8401.jpg",
+        "uploads/bmw-m-1000-rr-race-bikes-2021-5k-4961x3307-2744.jpg",
+        "uploads/CBR.jpg"
+    ],
+    "video": {
+        "url": "uploads/video1.mp4"
+    }
+}

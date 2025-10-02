@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin</title></head>
+<body>
+  <h1>Edit Konten Home</h1>
+  <form method="POST" enctype="multipart/form-data">
+
+    <h3>Upload Gambar Carousel</h3>
+    <div>
+        <label>Carousel 1:</label>
+        <input type="file" name="hero_carousel1">
+    </div>
+    <div>
+        <label>Carousel 2:</label>
+        <input type="file" name="hero_carousel2">
+    </div>
+    <div>
+        <label>Carousel 3:</label>
+        <input type="file" name="hero_carousel3">
+    </div>
+
+    <label>Judul:</label><br>
+    <input type="text" name="hero_title" value="{{ data.hero_title }}"><br><br>
+
+    <label>Judul:</label><br>
+    <input type="text" name="hero_chapter" value="{{ data.hero_chapter }}"><br><br>
+
+    <label>Deskripsi:</label><br>
+    <textarea name="hero_description">{{ data.about_paragraph1 }}</textarea><br><br>
+
+    <label for="video_url">Upload Video</label>
+    <input type="file" name="video_url" id="video_url" accept="video/*">
+
+    <button type="submit">Simpan</button>
+  </form>
+</body>
+</html>
