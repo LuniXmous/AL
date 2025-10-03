@@ -3,58 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home - Dinas Hukum Angkatan Laut</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <header>
         <nav class="container">
             <img src="static/images/logo.png" alt="Logo Dinas Hukum Angkatan Laut" class="logo">
+            <div class="burger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <!-- Dropdown Profil -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="profilDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="profilDropdown" role="button" data-bs-toggle="dropdown">
                         Profil
                     </a>
-                    <ul class="dropdown-menu text-dark" aria-labelledby="profilDropdown">
-                        <li><a class="dropdown-item text-dark" href="#">Sejarah</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Visi & Misi</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Struktur Organisasi</a></li>
+                    <ul class="dropdown-menu" aria-labelledby="profilDropdown" style="background-color: #e1eff8;">
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Sejarah</a></li>
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Visi & Misi</a></li>
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Struktur Organisasi</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#projects">Berita</a>
                 </li>
-                <!-- Dropdown Artikel -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="artikelDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="artikelDropdown" role="button" data-bs-toggle="dropdown">
                         Artikel
                     </a>
-                    <ul class="dropdown-menu text-dark" aria-labelledby="artikelDropdown">
-                        <li><a class="dropdown-item text-dark" href="#">Fokus</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Analisa</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Opini</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Studi Kasus</a></li>
+                    <ul class="dropdown-menu" aria-labelledby="artikelDropdown" style="background-color: #e1eff8;">
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Analisa</a></li>
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Opini</a></li>
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Studi Kasus</a></li>
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Fokus</a></li>
                     </ul>
                 </li>
-                <!-- Dropdown Regulasi -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="regulasiDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="regulasiDropdown" role="button" data-bs-toggle="dropdown">
                         Regulasi
                     </a>
-                    <ul class="dropdown-menu text-dark" aria-labelledby="regulasiDropdown">
-                        <li><a class="dropdown-item text-dark" href="#">Undang - undang</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Peraturan Pemerintah</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Perpres/Kerpres</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Peraturan Menteri</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Peraturan AL</a></li>
+                    <ul class="dropdown-menu" aria-labelledby="regulasiDropdown" style="background-color: #e1eff8;">
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Undang - undang</a></li>
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Peraturan Pemerintah</a></li>
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Perpres/Kerpres</a></li>
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Peraturan Menteri</a></li>
+                        <li><a class="dropdown-item" style="color: #000000ff;" href="#">Peraturan AL</a></li>
                     </ul>
                 </li>
                 <li><a href="#partnership">Binkorp</a></li>
@@ -64,17 +62,21 @@
             </ul>
         </nav>
     </header>
+
     <section id="home" class="hero position-relative">
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/Gemini_Generated_Image_wbia2iwbia2iwbia_1.png') }}');"></div>
+                    <div class="overlay"></div> 
+                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/baner1.jpg') }}');"></div>
                 </div>
                 <div class="carousel-item">
-                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/Gemini_Generated_Image_wbia2iwbia2iwbia_2.png') }}');"></div>
+                    <div class="overlay"></div> 
+                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/baner2.jpg') }}');"></div>
                 </div>
                 <div class="carousel-item">
-                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/Gemini_Generated_Image_wbia2iwbia2iwbia.png') }}');"></div>
+                    <div class="overlay"></div> 
+                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/baner3.jpg') }}');"></div>
                 </div>
             </div>
         </div>
@@ -88,96 +90,72 @@
 
     <section id="about" class="about">
         <div class="container">
-            <center><h2 class="about-section-title fade-in">About us</h2></center>
+            <center><h2 class="about-section-title fade-in">Tentang Diskumal</h2></center>
             <div class="about-content">
-                    <div class="video-container text-center mt-5 fade-in">
-                        <video width="560" height="315" controls>
+                <div class="video-container text-center mt-5 fade-in">
+                    <video width="560" height="315" controls>
                             <source src="{{ url_for('static', filename='uploads/video1.mp4') }}" type="video/mp4">
-                            Browser tidak mendukung video ini.
-                        </video>
-                    </div>
+                        Browser tidak mendukung video ini.
+                    </video>
+                </div>
                 <div class="about-text fade-in">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor, magna at dignissim dignissim, erat ante venenatis quam, vel viverra dui erat eget felis. Quisque metus sem, aliquet vel ex vitae, euismod lobortis justo.</p>
+                    <p>Dinas Hukum Angkatan Laut merupakan satuan kerja yang bertanggung jawab dalam bidang hukum dan perundang-undangan di lingkungan TNI Angkatan Laut. Kami berkomitmen untuk mewujudkan supremasi hukum yang profesional, akuntabel, dan berkeadilan.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects"  style="padding:50px 180px 200px 180px;">
-        <div style="max-width:1000px; font-family:sans-serif; margin:auto; display:flex; gap:20px; align-items:flex-start;">
-            
-            <!-- KIRI: Card Gambar -->
-            <div style="flex:1; border-radius:10px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); height:615px; background-color: #e1eff8;">
-                <div style="padding:15px;">
-                    <h2 style="color:#5b7ea7; margin:0; padding:10px; border-radius:6px 6px 0 0;">
-                        Regulasi
-                    </h2>
-                    <ul style="list-style:none; padding:0; margin-top:10px;">
-                        <li style="margin:10px 0; padding:10px; border:2px solid #ddd; border-radius:8px; height:180px; overflow:hidden;">
-                            <a href="regulasi-1.html" style="text-decoration:none; color:#333; font-weight:bold;">
-                                Undang-Undang Nomor 34 Tahun 2004 tentang Tentara Nasional Indonesia
-                            </a>
-                            <p style="margin:5px 0; font-size:14px; color:#555;">
-                                Undang-Undang ini mengatur tentang peran, tugas, dan fungsi Tentara Nasional Indonesia (TNI) dalam menjaga kedaulatan negara dan keutuhan wilayah NKRI.
-                            </p>
-                        </li>
-                    </ul>
-                    <ul style="list-style:none; padding:0; margin-top:10px;">
-                        <li style="margin:10px 0; padding:10px; border:2px solid #ddd; border-radius:8px; height:180px; overflow:hidden;">
-                            <a href="regulasi-1.html" style="text-decoration:none; color:#333; font-weight:bold;">
-                                PERKASAL NOMOR 20 THN 2025 TTG ORGANISASI DAN TUGAS KOMPI PRODUKSI PANGKALAN TNI AL
-                            </a>
-                            <p style="margin:5px 0; font-size:14px; color:#555;">
-                                Undang-Undang ini mengatur tentang peran, tugas, dan fungsi Tentara Nasional Indonesia (TNI) dalam menjaga kedaulatan negara dan keutuhan wilayah NKRI.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- KANAN: Artikel List -->
-            <div style="flex:1; padding:10px;">
-            <h2 style="margin-bottom:15px; color: white;">Artikel Terbaru</h2>
-            <div style="flex:1; border-radius:10px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); height:550px; background-color: #e1eff8;">
-            <div style="padding:15px;">
-                <ul style="list-style:none; padding:0;">
-                    <li style="margin:10px 0; padding:10px; border:2px solid #ddd; border-radius:8px; height:180px; overflow:hidden;">
-                        <a href="regulasi-1.html" style="text-decoration:none; color:#333; font-weight:bold;">
-                            RESUME FOCUS GROUP DISCUSSION (FGD) WEBINAR ALTERNATIF PENYELESAIAN TINDAK PIDANA PERIKANAN DI ZEEI                        </a>
-                        <p style="margin:5px 0; font-size:14px; color:#555;">
-                            Undang-Undang ini mengatur tentang peran, tugas, dan fungsi Tentara Nasional Indonesia (TNI) dalam menjaga kedaulatan negara dan keutuhan wilayah NKRI.
-                        </p>
+    <section id="projects" class="projects">
+        <div class="projects-wrapper">
+            <!-- Card Regulasi -->
+            <div class="projects-card fade-in-left">
+                <h2>Regulasi</h2>
+                <ul>
+                    <li>
+                        <a href="#">Undang-Undang Nomor 34 Tahun 2004 tentang Tentara Nasional Indonesia</a>
+                        <p>Undang-Undang ini mengatur tentang peran, tugas, dan fungsi Tentara Nasional Indonesia (TNI) dalam menjaga kedaulatan negara dan keutuhan wilayah NKRI.</p>
+                    </li>
+                    <li>
+                        <a href="#">PERKASAL NOMOR 20 THN 2025 TTG ORGANISASI DAN TUGAS KOMPI PRODUKSI PANGKALAN TNI AL</a>
+                        <p>Undang-Undang ini mengatur tentang peran, tugas, dan fungsi Tentara Nasional Indonesia (TNI) dalam menjaga kedaulatan negara dan keutuhan wilayah NKRI.</p>
                     </li>
                 </ul>
-            </div>  
+            </div>
 
+            <!-- Card Artikel -->
+            <div class="projects-card fade-in-right">
+                <h2>Artikel Terbaru</h2>
+                <ul>
+                    <li>
+                        <a href="#">RESUME FOCUS GROUP DISCUSSION (FGD) WEBINAR ALTERNATIF PENYELESAIAN TINDAK PIDANA PERIKANAN DI ZEEI</a>
+                        <p>Undang-Undang ini mengatur tentang peran, tugas, dan fungsi Tentara Nasional Indonesia (TNI) dalam menjaga kedaulatan negara dan keutuhan wilayah NKRI.</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
-
     <section id="join" class="hero position-relative">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="heroCarousel2" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/Gemini_Generated_Image_wbia2iwbia2iwbia_1.png') }}');"></div>
+                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/header1.jpg') }}');"></div>
                 </div>
                 <div class="carousel-item">
-                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/Gemini_Generated_Image_wbia2iwbia2iwbia_2.png') }}');"></div>
+                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/header3.jpg') }}');"></div>
                 </div>
                 <div class="carousel-item">
-                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/Gemini_Generated_Image_wbia2iwbia2iwbia.png') }}');"></div>
+                    <div class="hero-bg" style="background-image: url('{{ url_for('static', filename='uploads/header4.jpg') }}');"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="partnership">
-        <!-- Judul Section -->
+    <section id="partnership" class="partnership">
         <div class="partnership-header fade-in">
             <h3>Link Terkait Lainnya</h3>
         </div>
 
-        <!-- Konten Card -->
         <div class="partnership-content fade-in">
             <div class="partnership-text">
                 <h3>Radio JJM</h3>
@@ -198,22 +176,19 @@
                     </ul>
                 </div>
                 <div class="orange-box">
-                    <div class="text-orange">
-                        <h4>Link Eksternal</h4>
-                        <ul>
-                            <li><a href="https://www.hukumonline.com/" target="_blank">Hukum Online</a></li>
-                            <li><a href="https://www.mahkamahagung.go.id/" target="_blank">Mahkamah Agung</a></li>
-                            <li><a href="https://www.mkri.id/" target="_blank">Mahkamah Konstitusi</a></li>
+                    <h4>Link Eksternal</h4>
+                    <ul>
+                        <li><a href="https://www.hukumonline.com/" target="_blank">Hukum Online</a></li>
+                        <li><a href="https://www.mahkamahagung.go.id/" target="_blank">Mahkamah Agung</a></li>
+                        <li><a href="https://www.mkri.id/" target="_blank">Mahkamah Konstitusi</a></li>
                             <li><a href="https://www.kpk.go.id/" target="_blank">Komisi Pemberantasan Korupsi</a></li>
                             <li><a href="https://www.bphn.go.id/" target="_blank">Badan Pembinaan Hukum Nasional</a></li>
                             <li><a href="https://peraturan.bpk.go.id/Home" target="_blank">Peraturan BPK</a></li>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-
 
     <footer>
         <div id="footer" class="container">
@@ -231,37 +206,146 @@
             </div>
         </div>
     </footer>
-    <script src="static/js/script.js"></script>
-</body>
-</html>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const ctx = document.getElementById('visitorChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Hari ini', 'Kemarin', 'Minggu ini', 'Bulan ini'],
-            datasets: [{
-                label: 'Jumlah Pengunjung',
-                data: [48, 44, 350, 1520],
-                backgroundColor: '#5b7ea7'
-            }]
-        },
-        options: {
-            indexAxis: 'y',
-            responsive: true,
-            plugins: {
-                legend: { display: false },
-                title: {
-                    display: true,
-                    text: 'Statistik Pengunjung Diskumal'
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const burger = document.querySelector('.burger');
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Kalau link punya dropdown, jangan tutup burger
+                if (link.classList.contains('dropdown-toggle')) {
+                    e.preventDefault(); // biar toggle jalan normal
+                    return;
                 }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true
+
+                const navLinks = document.querySelector('.nav-links');
+                const burger = document.querySelector('.burger');
+                navLinks.classList.remove('active');
+                burger.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations with intersection observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        const homeSection = document.querySelector('#home');
+        const joinSection = document.querySelector('#join');
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const logo = document.querySelector('.logo');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const scrollPos = window.scrollY + window.innerHeight / 2;
+            
+            if (homeSection && joinSection) {
+                const inHome = scrollPos >= homeSection.offsetTop && scrollPos < homeSection.offsetTop + homeSection.offsetHeight;
+                const inJoin = scrollPos >= joinSection.offsetTop && scrollPos < joinSection.offsetTop + joinSection.offsetHeight;
+                
+                if (inHome || inJoin) {
+                    header.classList.remove('scrolled');
+                    if (logo) logo.style.color = '#EDE8DC';
+                    navLinks.forEach(link => {
+                        if (!link.classList.contains('dropdown-item')) {
+                            link.style.color = '#EDE8DC';
+                        }
+                    });
+
+                } else {
+                    header.classList.add('scrolled');
+                    if (logo) logo.style.color = '#ffffff';
+                    navLinks.forEach(link => link.style.color = '#ffffff');
                 }
             }
+        });
+
+        // Typing effect for hero text
+        const heroTitle = document.querySelector('.hero-content h3');
+        if (heroTitle) {
+            const originalText = heroTitle.textContent;
+            heroTitle.textContent = '';
+            
+            setTimeout(() => {
+                let i = 0;
+                const typeWriter = () => {
+                    if (i < originalText.length) {
+                        heroTitle.textContent += originalText.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 100);
+                    }
+                };
+                typeWriter();
+            }, 1000);
         }
-    });
-</script>
+
+        // Chart
+        const ctx = document.getElementById('visitorChart');
+        if (ctx) {
+            new Chart(ctx.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Hari ini', 'Kemarin', 'Minggu ini', 'Bulan ini'],
+                    datasets: [{
+                        label: 'Jumlah Pengunjung',
+                        data: [48, 44, 350, 1520],
+                        backgroundColor: '#5b7ea7'
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: 'Statistik Pengunjung Diskumal'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

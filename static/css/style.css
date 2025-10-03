@@ -11,7 +11,7 @@
             background: #5b7ea7;
         }
 
-        section{
+        section {
             background-color: #5b7ea7;
         }
 
@@ -23,7 +23,7 @@
 
         /* Header */
         header {
-            background-color: transparent; 
+            background-color: transparent;
             position: fixed;
             width: 100%;
             top: 0;
@@ -32,7 +32,7 @@
         }
 
         header.scrolled {
-            background-color: #5b7ea7
+            background-color: #5b7ea7;
         }
 
         nav {
@@ -43,8 +43,8 @@
         }
 
         .logo {
-            width: 100px; /* atur sesuai kebutuhan */
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -55,7 +55,6 @@
             list-style: none;
             gap: 2rem;
             margin-top: 15px;
-
         }
 
         .nav-links a {
@@ -68,8 +67,48 @@
         .nav-links a:hover {
             color: #3498db;
         }
+
+        .nav-links .dropdown-item {
+            color: #000 !important;       /* paksa hitam */
+        }
+
+        .nav-links .dropdown-item:hover {
+            color: #3498db !important;    /* warna saat hover */
+            background-color: #e1eff8;    /* optional hover background */
+        }
+
+        .dropdown-menu .dropdown-item {
+            color: #000 !important;
+        }
         
 
+
+        /* Burger Menu */
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .burger span {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .burger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
 
         /* Hero Section */
         .hero {
@@ -80,14 +119,20 @@
 
         .hero-bg {
             height: 100vh;
-            background-size: contain;
+            width: 100%;
+            background-size:cover;   /* jaga rasio gambar */
             background-position: center;
-            filter: brightness(0.5);
-            z-index: 1;
+            background-repeat: no-repeat;
+            background-color: #000;     /* kasih warna latar belakang */
         }
 
-        .carousel-item {
-            z-index: 1;
+        #heroCarousel2 .hero-bg {
+            height: 100vh;
+            width: 100%;
+            background-size: contain;   /* hanya berlaku di carousel kedua */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #5b7ea7;
         }
 
         .hero .container {
@@ -96,6 +141,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            text-shadow: 6px 6px 60px rgba(1,1,2,1);  
         }
 
         .hero-content {
@@ -103,46 +149,30 @@
             z-index: 30;
         }
 
-        .hero-content h1 {
-            font-size: 1 rem;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: fadeInUp 1.5s ease forwards;
-        }
-
         .hero-content h2 {
+            font-size: 2rem;
             margin-bottom: 1rem;
             opacity: 0;
-            margin-bottom: 1 rem;
             animation: fadeInUp 1s ease forwards;
         }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+        .hero-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             opacity: 0;
             animation: fadeInUp 1s ease 0.3s forwards;
         }
 
-        .custom-btn {
-            display: inline-block;
-            background: #0100F2;
-            color: white;
-            margin-top: 20px;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            opacity: 0;
-            animation: fadeInUp 1s ease 5s forwards;
-        }
 
-        .custom-btn:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
+        .carousel-item {
+            position: relative;
+            }
+
+            .carousel-item .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4);  /* transparansi gelap */
+            }
 
 
         /* About Section */
@@ -153,30 +183,20 @@
 
         .about h2 {
             color: #fcfcfc;
+            margin-bottom: 2rem;
         }
-        
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
             align-items: center;
         }
 
-        .about-image {
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border: 5px solid #3498db;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
+        .video-container video {
+            width: 100%;
+            max-width: 560px;
+            height: auto;
         }
 
         .about-text {
@@ -185,100 +205,158 @@
             color: #ffffff;
         }
 
-        .about-btn {
-            display: inline-block;
-            background: #0100F2;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            opacity: 0;
-            animation: fadeInUp 1s ease 1.2s forwards;
-        }
-
-        .about-btn:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        
-        
-        /* project section */
+        /* Projects Section */
         .projects {
-            padding: 100px 0 100px 0; /* top, right, bottom, left */
+            padding: 80px 20px;
             background: #5b7ea7;
         }
 
-        
-        /* Flexbox agar item bisa di-center kalau hanya 1 atau 2 */
-        .projects-grid {
+        .projects-wrapper {
+            max-width: 1000px;
+            margin: auto;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        /* Responsif */
-        .project-card {
-            background: #f8f9fa;
-            border-radius: 10px;
-            flex: 0 1 300px;
-            height: 500px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeInUp 0.8s ease forwards;
-            opacity: 0;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-        
-        .project-img {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .project-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-        }
-        
-        .project-content {
-            padding: 1.5rem;
-        }
-        
-        .project-content h3 {
-            margin-bottom: 0.5rem;
-            color: #ffffff;
-        }
-        
-        .project-content p {
-            color: #ffffff;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
+            gap: 20px;
+            align-items: flex-start;
         }
 
-         /* Footer */
+        .projects-card {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: #e1eff8;
+            padding: 15px;
+        }
+
+        .projects-card h2 {
+            color: #5b7ea7;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .projects-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .projects-card li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .projects-card a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .projects-card p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Partnership Section */
+        .partnership {
+            padding: 10px 10px 200px 10px;
+        }
+
+        .partnership-header {
+            text-align: center;
+            margin-bottom: 70px;
+            color: #ffffff;
+        }
+
+        .partnership-content {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .partnership-text {
+            background-color: #e1eff8;
+            padding: 20px;
+            width: 50%;
+            border-radius: 8px;
+        }
+
+        .partnership-text h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-radio {
+            width: 50%;
+            height: auto;
+            max-width: 200px;
+        }
+
+        .partnership-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .logo-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .logo-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .logo-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .logo-box li {
+            margin: 10px 0;
+        }
+
+        .logo-box a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .orange-box {
+            background-color: #fea405;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .orange-box h4 {
+            margin-bottom: 15px;
+        }
+
+        .orange-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .orange-box li {
+            margin: 10px 0;
+        }
+
+        .orange-box a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Footer */
         footer {
             background: #1a252f;
             color: white;
             padding: 2rem 0;
         }
-        
+
         footer .container {
             display: flex;
             justify-content: space-between;
@@ -294,7 +372,6 @@
         .footer-content-right {
             flex: 1;
             text-align: right;
-            margin-top: -50px;
         }
 
         .footer-content-right i {
@@ -302,128 +379,6 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
-
-        .fi{
-            font-size: 2rem;
-        }
-
-        /* partnership.html */
-        /* Section About Us */
-        .partnership {
-            padding: 80px;
-        }
-
-        .partnership-header {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #ffffff;
-        }
-
-        .partnership-content {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .partnership-text {
-            background-color: #e1eff8;
-            padding: 20px;
-            width: 50%;
-            height: 600px !important;
-            text-align: justify;
-            border-radius: 8px;
-        }
-        .partnership-text h3 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .partnership-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #333;
-        }
-        .partnership-logo {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;  
-        }
-        .logo-box {
-            background-color: white;
-            width: 100%;
-            height: 260px;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .orange-box {
-            background-color: #fea405;
-            width: 500px;
-            height: 320px;
-            border-radius: 8px;
-        }
-
-        .text-orange {
-            color: rgb(0, 0, 0);
-            padding: 20px 20px 0 20px; /* top right bottom left */
-        }
-
-        .text-orange h4{
-            text-align: start;
-        }
-
-        .text-orange p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #333;
-            text-align: justify;
-        }
-
-        .logo-radio {
-            width: 50%;
-            height: 50%;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        /* Section Our Values */
-        .values {
-            padding: 120px;
-        }
-        .values h2 {
-            margin-bottom: 80px;
-            
-        }
-        .circle-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px; /* jarak antar lingkaran */
-        }
-
-        .circle {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            background-color: #00B361;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-            font-size: x-large;
-        }
-
-        .circle:nth-child(1) {
-            margin-top: 0px; /* paling tinggi */
-        }
-
-        .circle:nth-child(2) {
-            margin-top: 50px; /* agak ke bawah */
-        }
-
-        .circle:nth-child(3) {
-            margin-top: -20px; /* lebih tinggi dari kiri */
-        }
-
 
         /* Animations */
         @keyframes fadeInUp {
@@ -437,14 +392,93 @@
             }
         }
 
-        /* Responsive Design */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+.fade-in-left, .fade-in-right {
+    opacity: 0;
+}
+
+/* saat terlihat, jalankan animasi */
+.fade-in-left.visible {
+    animation: fadeInLeft 0.8s forwards;
+}
+
+.fade-in-right.visible {
+    animation: fadeInRight 0.8s forwards;
+}
+
+/* keyframes */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .burger {
+                display: flex;
             }
 
-            .hero-content h1 {
-                font-size: 2.5rem;
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 60px;
+                flex-direction: column;
+                background-color: #5b7ea7;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 20px 0;
+                margin: 0;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-content h3 {
+                font-size: 1rem;
             }
 
             .about-content {
@@ -452,12 +486,44 @@
                 text-align: center;
             }
 
-            .contact-content {
-                grid-template-columns: 1fr;
+            .video-container video {
+                width: 100%;
+                height: auto;
             }
 
-            .section-title {
-                font-size: 2rem;
+            /* Projects Section Mobile */
+            .projects {
+                padding: 50px 15px;
+            }
+
+            .projects-wrapper {
+                flex-direction: column;
+            }
+
+            .projects-card {
+                width: 100%;
+            }
+
+            .projects-card li {
+                height: auto;
+                min-height: 150px;
+            }
+
+            /* Partnership Mobile */
+            .partnership-content {
+                flex-direction: column;
+            }
+
+            .partnership-text {
+                width: 100%;
+            }
+
+            .partnership-logo {
+                width: 100%;
+            }
+
+            .orange-box {
+                width: 100%;
             }
 
             footer .container {
@@ -470,21 +536,13 @@
                 text-align: center;
                 margin: 1rem 0;
             }
+
+            .footer-content-right {
+                margin-top: 0;
+            }
         }
 
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
-        }
-
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
